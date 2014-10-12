@@ -1,0 +1,17 @@
+/funsets/.cache
+/funsets/target
+/funsets/submission
+/funsets/.settings
+/funsets/build.sbt
+/funsets/.project
+/funsets/.classpath
+/objsets/target
+/objsets/.settings
+/objsets/lib_managed
+/objsets/submission
+/objsets/.cache
+/objsets/.classpath
+/objsets/.project
+/objsets/build.sbt
+/.metadata
+target

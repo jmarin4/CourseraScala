@@ -77,15 +77,6 @@ class FunSetSuite extends FunSuite {
     val s1 = singletonSet(1)
     val s2 = singletonSet(2)
     val s3 = singletonSet(3)
-    
-    val s123 = union( union( s1, s2 ), s3)
-    val s123intersects2 = intersect( s123, s2 )
-    val s123diffs2 = diff( s123, s2)
-    val s123evens = filter( s123, (x:Int) => 0 == x%2)
-    val s123isallpos = forall( s123, (x:Int) => x>=0)
-    val s123isallodd = forall( s123, (x:Int) => 0 == x%2)
-    
-    val s123times4 = map( s123, (x:Int) => x*4)
   }
 
   /**
@@ -95,7 +86,7 @@ class FunSetSuite extends FunSuite {
    * Once you finish your implementation of "singletonSet", exchange the
    * function "ignore" by "test".
    */
-  test("singletonSet(1) contains 1") {
+  ignore("singletonSet(1) contains 1") {
     
     /**
      * We create a new instance of the "TestSets" trait, this gives us access
@@ -107,20 +98,10 @@ class FunSetSuite extends FunSuite {
        * the test fails. This helps identifying which assertion failed.
        */
       assert(contains(s1, 1), "Singleton")
-      
-      
-      assert( contains( union(s1, s2), 2 ))
-      assert( !contains(s123intersects2, 1) && contains(s123intersects2, 2) && !contains(s123intersects2, 3) )
-      assert( contains(s123diffs2, 1) && !contains(s123diffs2, 2) && contains(s123diffs2, 3) )
-      assert( !contains(s123evens, 1) && contains(s123evens, 2) && !contains(s123evens, 3) )
-      assert( s123isallpos )
-      assert( !s123isallodd )
-      assert( exists(s123, (p:Int) => p == 2), "exists")
-      assert( contains(s123times4, 4) && contains(s123times4, 8) && contains(s123times4, 12), "times4" )
     }
   }
 
-  test("union contains all elements") {
+  ignore("union contains all elements") {
     new TestSets {
       val s = union(s1, s2)
       assert(contains(s, 1), "Union 1")
